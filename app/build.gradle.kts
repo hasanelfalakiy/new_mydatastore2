@@ -65,4 +65,6 @@ dependencies {
     implementation("com.github.haroldadmin:WhatTheStack:1.0.0-alpha04")
     // leak canary
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.12")
+    // YCharts
+    implementation("co.yml:ycharts:2.1.0")
 }
