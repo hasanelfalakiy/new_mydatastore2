@@ -76,9 +76,9 @@ public class MainActivity : AppCompatActivity() {
         val steps = 12
         val xAxisData = AxisData.Builder()
             .axisStepSize(50.dp)
-            .axisLabelColor(Color.Blue)
-            .axisLineColor(Color.DarkGray)
-            //.backgroundColor(Color.Blue)
+            .axisLabelColor(Color.Green)
+            .axisLineColor(Color.Green)
+            .backgroundColor(Color.Transparent)
             .steps(pointsData.size - 1)
             .labelData { i -> i.toString() }
             .labelAndAxisLinePadding(15.dp)
@@ -86,10 +86,10 @@ public class MainActivity : AppCompatActivity() {
 
         val yAxisData = AxisData.Builder()
             .steps(steps)
-            //.backgroundColor(Color.Green)
+            .backgroundColor(Color.Transparent)
             .labelAndAxisLinePadding(20.dp)
-            .axisLabelColor(Color.Blue)
-            .axisLineColor(Color.DarkGray)
+            .axisLabelColor(Color.Green)
+            .axisLineColor(Color.Green)
             .labelData { i ->
                 // Add yMin to get the negative axis values to the scale
                 val yMin = pointsData.minOf { it.y }
@@ -104,7 +104,7 @@ public class MainActivity : AppCompatActivity() {
                    Line(
                        dataPoints = pointsData,
                        LineStyle(
-                           lineType = LineType.SmoothCurve(), color = Color.Green
+                           color = Color.Green
                        ),
                        IntersectionPoint(
                            color = Color.Green
@@ -120,19 +120,14 @@ public class MainActivity : AppCompatActivity() {
                                )
                            ), alpha = 0.3f
                        ),
-                       SelectionHighlightPopUp(
-                           backgroundColor = Color.Black,
-                           backgroundStyle = Stroke(2f),
-                           labelColor = Color.Red,
-                           labelTypeface = Typeface.DEFAULT_BOLD
-                       )
+                       SelectionHighlightPopUp()
                    )
                ),
            ),
            xAxisData = xAxisData,
            yAxisData = yAxisData,
            gridLines = GridLines(),
-           //backgroundColor = Color.Transparent
+           backgroundColor = Color.Transparent
            )
         
         binding.composeView.apply {
@@ -143,7 +138,7 @@ public class MainActivity : AppCompatActivity() {
                     modifier = Modifier
                     .fillMaxWidth()
                     .height(300.dp),
-                    lineChartData = lineChartData
+                    lineChartData = lineChartData,
                     )
             }
         }
