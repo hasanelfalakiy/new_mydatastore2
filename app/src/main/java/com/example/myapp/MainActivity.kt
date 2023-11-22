@@ -12,6 +12,10 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
+import androidx.compose.ui.platform.ViewCompositionStrategy
+import androidx.compose.material.Text
+import androidx.compose.runtime.*
+
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "Setting")
 
@@ -32,6 +36,13 @@ public class MainActivity : AppCompatActivity() {
         bindingSettings = ActivitySettingsBinding.inflate(layoutInflater)
         // set content view to binding's root
         setContentView(binding.root)
+        
+        binding.composeView.apply {
+            setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
+            setContent {
+                Text(text = "hai from compose")
+            }
+        }
         
         val pref = SettingPreferences.getInstance(dataStore)
         val settingViewModel = ViewModelProvider(this, ViewModelFactory(pref)).get(

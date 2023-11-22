@@ -34,7 +34,11 @@ android {
 
     buildFeatures {
         viewBinding = true
+        compose = true
         
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.4"
     }
     
 }
@@ -53,6 +57,10 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
+    
+    // compose
+    implementation("androidx.compose.ui:ui:1.5.4")
+    implementation("androidx.compose.material:material:1.5.4")
     
     implementation("com.github.haroldadmin:WhatTheStack:1.0.0-alpha04")
     // leak canary

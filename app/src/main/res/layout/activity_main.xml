@@ -6,11 +6,10 @@
     android:layout_height="match_parent"
         >
 
-    <TextView
-        android:id="@+id/tv"
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/compose_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello user!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +19,7 @@
     <Button
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv"
+        app:layout_constraintTop_toBottomOf="@id/compose_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
