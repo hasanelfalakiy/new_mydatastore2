@@ -60,11 +60,14 @@ dependencies {
     
     // compose
     implementation("androidx.compose.ui:ui:1.5.4")
-    implementation("androidx.compose.material:material:1.5.4")
+    // implementation("androidx.compose.material:material:1.5.4")
+    implementation("androidx.compose.material3:material3:1.1.2")
     
     implementation("com.github.haroldadmin:WhatTheStack:1.0.0-alpha04")
     // leak canary
     debugImplementation("com.squareup.leakcanary:leakcanary-android:2.12")
     // YCharts
     implementation("co.yml:ycharts:2.1.0")
+    // Composable Graphs
+    // implementation ("com.github.jaikeerthick:Composable-Graphs:v1.2.1")
 }

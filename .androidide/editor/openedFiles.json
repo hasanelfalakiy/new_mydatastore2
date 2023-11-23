@@ -4,44 +4,14 @@
       "file": "/storage/emulated/0/AndroidIDEProjects/My App/app/src/main/java/com/example/myapp/MainActivity.kt",
       "selection": {
         "end": {
-          "column": 80,
-          "index": 5579,
-          "line": 135
+          "column": 22,
+          "index": 3212,
+          "line": 80
         },
         "start": {
-          "column": 80,
-          "index": 5579,
-          "line": 135
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/My App/app/src/main/res/values/colors.xml",
-      "selection": {
-        "end": {
-          "column": 53,
-          "index": 3777,
-          "line": 62
-        },
-        "start": {
-          "column": 53,
-          "index": 3777,
-          "line": 62
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/AndroidIDEProjects/My App/app/src/main/res/values/themes.xml",
-      "selection": {
-        "end": {
-          "column": 34,
-          "index": 93,
-          "line": 1
-        },
-        "start": {
-          "column": 34,
-          "index": 93,
-          "line": 1
+          "column": 22,
+          "index": 3212,
+          "line": 80
         }
       }
     }
